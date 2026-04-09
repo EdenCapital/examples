@@ -1,0 +1,12 @@
+[
+  {
+    "id": "doc-1",
+    "title": "SSS Overview",
+    "summary": "SSS DeFi assistant helps users discover docs, market data, and next actions."
+  },
+  {
+    "id": "doc-2",
+    "title": "Roadmap",
+    "summary": "Upcoming integrations: docs canister, data APIs, and GPT fallback workflows."
+  }
+]
