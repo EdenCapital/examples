@@ -1,0 +1,21 @@
+{
+  "name": "sss_ai_assistant",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:api dev:web",
+    "dev:api": "npm run dev -w @sss/api",
+    "dev:web": "npm run dev -w @sss/web",
+    "build": "npm-run-all build:shared build:api build:web",
+    "build:shared": "npm run build -w @sss/shared",
+    "build:api": "npm run build -w @sss/api",
+    "build:web": "npm run build -w @sss/web"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

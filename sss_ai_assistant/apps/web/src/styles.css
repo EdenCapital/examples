@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  background: color-mix(in srgb, canvas 92%, #101522 8%);
+  color: canvastext;
+}
+
+.sidebar {
+  border-right: 1px solid color-mix(in srgb, canvastext 25%, transparent);
+  padding: 1rem;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid color-mix(in srgb, canvastext 20%, transparent);
+  border-radius: 8px;
+  background: transparent;
+  padding: 0.5rem;
+  color: inherit;
+}
+
+.sidebar .active {
+  border-color: #5b8cff;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid color-mix(in srgb, canvastext 25%, transparent);
+}
+
+.chat-window {
+  padding: 1rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.placeholder {
+  opacity: 0.7;
+}
+
+.bubble {
+  max-width: min(720px, 90%);
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, canvastext 20%, transparent);
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: color-mix(in srgb, #5b8cff 18%, transparent);
+}
+
+.bubble.assistant {
+  align-self: flex-start;
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid color-mix(in srgb, canvastext 25%, transparent);
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, canvastext 20%, transparent);
+  background: transparent;
+  color: inherit;
+}
+
+.chat-form button,
+.header button,
+.settings-header button {
+  border: 1px solid color-mix(in srgb, canvastext 20%, transparent);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  padding: 0.55rem 0.8rem;
+}
+
+.settings-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  padding: 1rem;
+  background: color-mix(in srgb, canvas 95%, #101522 5%);
+  border-left: 1px solid color-mix(in srgb, canvastext 20%, transparent);
+  transition: right 0.2s ease;
+}
+
+.settings-drawer.open {
+  right: 0;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
